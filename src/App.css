@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Cairo+Play:wght@300&family=IBM+Plex+Sans:wght@300&display=swap');
+*   {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+background-color:lightsteelblue;
+display: grid;
+place-content: center;
+font-family: 'Cairo Play', sans-serif;
+font-family: 'IBM Plex Sans', sans-serif;
+height: 100vh;
+font-size: 1.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container {
+height: 600px;
+width: 450px;
+background-color: black;
+border-radius: 10px;
+padding: 10px;
+} 
+
+.wrapper{
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap:10px;
+}
+.screen{
+  grid-column: 1 / -1;
+  color: whitesmoke;
+  text-align:center;
+  padding: 1px;
+  font-size: 5px;
+  overflow: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.btn {
+  display:grid;
+  place-content: center;
+  background-color: rgb(54,50,50);
+  border-radius: 50%;
+  color:aliceblue;
+  cursor:pointer;
+  font-weight: bold;
+}
+
+.btn:hover{
+  background-color: gray;
+
+}
+
+.light-gray{
+  background-color: gray;
+  color: black;
+}
+
+.light-gray:hover{
+  background-color: white;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.orange:hover {
+  background-color: white;
+  color: orange;
+}
+
+.zero {
+  grid-column:1 / span 2;
+  border-radius: 25px;
+  place-content: unset;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+  padding-left: 40px;
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
